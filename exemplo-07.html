@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title> Javascript</title>
+
+ <script type="text/javascript">
+
+    function calcularIMC(){
+
+
+        var formulário = document.getElementById("formulário");
+
+        var kilos = +formularios.kilos.value;
+        var metros = +formularios.metros.value;
+        var centimentros = +formularios.centimetros.value;
+
+        var altura = (metros * 100) + centimentros/100;
+        var imc = kilos / (altura * altura);
+
+
+        formulario.imc.value = imc.toFixed(2);
+
+        if(imc <20){
+
+                alert("Abaixo do peso");
+        }else if( imc >=20 && icm <=25){
+
+            alert("Peso ideal");
+        }else if (imc >=25 && imc <=30){
+
+            alert("Sobrepeso");
+        }else if(imc >=30 && imc <=35){
+
+            alert("Obesidade Moderada");
+        }else if(icm >=35 && icm <=40){
+
+            alert("Obesidade severa");
+
+        }else if(imc >=40 && imc <=50){
+            alert("Obesidade Mórbida");
+        }else{
+
+            alert("Super Obesidade");
+        }
+
+
+    }
+</script>
+
+<style type="text/css">
+        #estimativa{
+
+            margin-top:10px;
+    }
+    #calcular{
+
+        margin-left: 115px
+    }
+    button{
+         margin-left: 101px;
+         margin-top: 5px
+    }
+</style>
+</head>
+<body>
+<form id="formulario">
+    <fieldset style="width:100px">
+        <legend>Calculo do IMC</legend>
+        <label for="milos">Kilos:</label>
+        <input type="text" name="kilos">
+
+        <label for="metros">Metros:</label>
+        <input type="text" name="Metros">
+
+        <label for="centimetros">centimentors:</label>
+        <input type="text" name="centimetros">
+
+        <label for="imc">IMC:</label>
+        <input type="text" name="imc" disabled="disabled">
+        <a href="#" onclick="calcularIMC();" id="calcular">Calcular</a>
+        <input id="estimativa" type="text" name="estimativa" placeholder="estimativa">
+        <button onclick="alert('icm');">Pesquisa</button>
+    
+    </fieldset>
+</form>
+
+   <table>
+        <tr><th>IMC</th><th>Classificação</th></tr>
+        <tr><td>&lt;20</td><td>Abaixo do peso</td> </tr>
+        <tr><td>20 a 25 </td><td>Peso ideal</td> </tr>
+        <tr><td>25 a 30</td><td>Sobrepeso</td> </tr>
+        <tr><td>30 a 35</td><td>Obesidade moderada</td> </tr>
+        <tr><td>35 a 40</td><td> Obesidade Severa</td></tr>
+        <tr><td>40 a 50</td><td>Obesidade Mórbida</td> </tr>
+        <tr><td>&gt; 50</td><td>Super Obsidade</td> </tr>
+   </table> 
+</body>
+
+</html>
+
+
+
