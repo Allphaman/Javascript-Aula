@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+
+        <style type="text/css">
+        
+        #formulario{
+
+                width: 300px;
+                height: 300px;
+                margin-left: 400px;
+                margin-top: 100px;
+        }
+
+        fieldset{
+
+            width: 200px;
+            height: 200px;
+        }
+        
+        .input{ 
+                padding-top: 10px;
+            
+        }
+        .input1{
+                padding-top: 5px;
+        }
+        
+        #cpf{
+                margin-bottom: 15px;
+        }
+        </style>
+
+        <script type="text/javascript">
+
+          function validar(){
+
+            var formulario = document.getElementById("formulario");
+            var cpf = formulario.cpf;
+            var email = formulario.email;
+
+            var re_cpf = /^(\d] {3}) ([\d] {3}) ([\d] {3}) ([\d]{2})$/;
+            var re_email = /^([\w-]+(\.[\w-]+)*)@ (( [\w-]+ \.)*\w[\w-]{0,66})\.([a-z]{2,6}(\.[a-z]{2})?)$/i;// padrão par email
+
+            if(re_cpf.test(cpf.value)){
+
+                    alert("CPF Válido");
+               // cpf.value = cpf.value.replace(re_cpf, "$1.$2.$3-$4");
+                
+                }else{
+
+                    alert("CPF inválido");
+                    //alert("CPF deve ter apenas 11 numeros, sem pontos ou traços");
+
+                }
+                if(!re_email.test(email.value)){
+
+                   alert("email invalido");
+                }
+
+
+               }
+            
+                
+
+        </script>
+    </head>
+    <body>
+        <form id="formulario">
+            <fieldset>
+                <legend>Validando e Formatando</legend>
+            
+                <br>
+               
+               <label for="cpf">CPF:</label>
+               <input name="cpf" type="text">
+           
+               <label for="email">Email:</label>
+               <input name="email" type="text">
+            
+                <br>
+                <br>
+                <a href="#" onclick="validar()">Validar</a>
+            </fieldset>
+    </form>
+
+    </body>
+</html>
