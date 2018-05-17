@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-
         <style type="text/css">
         
             fieldset{
-
                         width: 150px;
                         height: 200px;
                         margin-left: 500px;
                         margin-top: 50px
-            }
+                    }
 
             .Email{
                     padding-top: 25px;
                 
-            }
+                  }
         </style>
-
     </head>
     <body>
         <script type="text/javascript">
-
            function Validar() {
-
             var formulario = document.getElementById("formulario");
             var cpf = formulario.cpf;
             var email = formulario.email;
-            
-
+               
                 var re_cpf = /^([\d]{3}) ([\d]{3}) ([\d]{3}) ([\d]{2})$/;
                 var re_email = /^([\w-]+(\.[\w-]+)*)@(([\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(\.[a-z]{2})?)$/i;
 
@@ -43,25 +36,20 @@
                 }
                 //verificando se o email é invalido
                 if(!re_email.test(email.value));{
-
-                        alert("Email invalido");
-                }   
-
+                    
+                        alert("Email invalido");       
+                       }   
              } 
         </script>
-
         <form id="formulario">
            <fieldset>
             <legend>Validando e Formatndo</legend>
             <label for="cpf">CPF:</label>
-            <input name="cpf" type="text">
-           
+            <input name="cpf" type="text">           
             <label for="email">Email:</label>
             <input name="email" type="text">
-          
             <br>
             <br>
-           
             <a href="#" onclick="Validar()">Validar</a>
            </fieldset> 
         </form>
