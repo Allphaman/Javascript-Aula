@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+                                        // operador [i] pede para ser ignorados as expressões maiusculas e minusculas
+            //var regeX =  /"JavaScript"/i; // expressões regulares podem ser criadas com o operador new e com uma barra /    /
+
+            //var string = "Javascript";
+
+            //alert (regeX.test(string));
+
+            //FUNÇÕES + MODIFICADORES
+
+            //alert(/Javascript/i.test("Javascript"));//função test retorna se um padrão aconteceu ou não!
+            //var str = "Qual é o doce mais doce que o doce?";
+           // alert(/doce/ig.exec(srt));// a função exec traz sempre a primerira referença
+            //alert(str.match(/doce/ig));
+            
+
+            //METACARCTERES
+            
+            //alert(/^\d\d\d\d\d-\d\d\d$/.test("70294-070"));// padrão para identificar se meu CEP está no formato correto!
+
+            //alert(/\d\d\d$/./.test("Pier21")); // o meta caractere [w] procura por qualquer caracter de A a Z, 0 a 9, e andelirne
+            // o meta caractere [s] procura a ocorrencia de espaco em nosso textto
+            // o meta caractere [d] procura por numero , é so para numeros!
+            //QUANTIFICADORES
+
+            //alert(/\d+/.test("piere21"));
+            //alert(/\d{5}-\d{3}$/.test("piere21"));
+            //alert(/^\d{2}\/\d{2}\/\d{4}$/.test("12/02/1980"));// formato para validação de DATA
+            //alert(/\w+@\w+\.\w{2,3}/.test("rh@xtiuniversity.com"));// padrão para validar email
+
+            //alert(/c[au]u/.test("ceu"));
+
+            //alert(/\d[\d\,]*/.test("23,45"));// padrão para validar hora!
+
+            var str = "Qual é doce mais doce que o doce?";
+
+            //alert(str.match(/doce/ig));// O [g] serve para pegar todas as pavalras com o atributo doce
+
+            //alert(str.replace(/doce/ig, "DOCINHO"));
+
+            var url = "www.xti.com.br/clientes-2011.html";
+
+            //"http://www.xti.com.br/2011/clientes.jsp";
+
+            var re = /www.xti.com.br\/w{2,}-\d{4}\.html/;
+
+            //alert(re.test(url));
+            
+        </script>
+    </body>
+</html>

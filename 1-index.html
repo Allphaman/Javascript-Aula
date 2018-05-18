@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        //UTC = Universal Time Coordinated
+        //UTC = GMT
+        //GMT = Greenwich mean Time
+        //Hora Brasil = Hora GMT - 3H
+            
+            var dias = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+            var mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+            var data = new Date("JUL/20/2014 04:30:20");
+          //var data = new Date(2018, 2, 14, 4, 35, 10, 1234);// com essa data você passa os parametros da data, mes, dia, ano, e a data,  
+        //var data = new Date ("April/14/2018 13:29:40");// data com string, ou seja, em forma de texto    
+        //var data = new Date();// Essa forma cria uma data atual, ou seja, ela pega a data do sistema operacional, horario de Brasília
+        //alert(data.getHours());//13 horas no brasil
+        //alert(data.getUTCHours());// 16 horas em GMT
+         //alert(data.getDay());//vai retornar o dia da semana   
+       // alert(dias[data.getDay()]);// estou passando duas variaveis: dias e data, será exibido o dia da semana em formato de string...
+        //alert(data.getFullYear());// essa função retorna o ano com 4 digitos  
+        //alert(data.getMilliseconds());//retorna só a quantidade de milissegundos desta data.
+        //alert(data.getMinutes());//retorna a quantidade em minutos
+        //alert(data.getMonth());// retorna o mes em forma de número
+        //alert(mes[data.getMonth()]);// retorna o mes só que em forma de String.
+        //alert(data.getSeconds());// retorna a quantidade de segundos
+        //alert(data.getTime());// esse metodo retorna a quantidade total de milessegundos do objeto data, desde a data inicial do obejto date.
+        //alert(data.getTimezoneOffset());// diferença entre a hora do brasil e a hora universal GMT
+        //alert(Date.parse(data));//é uma função estática, posso chama-la direto, não preciso chama-la de uma instância. essa função ira retorna o numero de milessegundos da data que será informada aqui!
+        //metodos GET são metodos para recuperar uma informação 
+        //data.setFullYear(2016);// essa função define o ano do nosso objeto.
+        //data.setDate(26);// serve para atribuir um dia diferente  
+        //data.setMonth(10);// serve para atribuir um mes diferente  
+
+        //alert(data.toDateString());// serve para apresentar a data em formato de String, ou seja, em formato de texto!
+        alert(data.toLocaleDateString());//esse metodo adota as convensões de um pais.
+
+      
+
+        </script>
+    </body>
+</html>
